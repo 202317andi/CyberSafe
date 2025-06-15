@@ -1,164 +1,171 @@
 // Espera a página carregar completamente
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializa todas as funcionalidades
-    initMobileMenu();
-    initThemeToggle();
-    initAccessibility();
-    initContactForm();
-    initPasswordChecker();
+    iniciarMenuMobile();
+    iniciarAlternadorTema();
+    iniciarAcessibilidade();
+    iniciarFormularioContato();
+    iniciarVerificadorSenha();
 });
 
 // ===== MENU MOBILE =====
-function initMobileMenu() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
+function iniciarMenuMobile() {
+    const menuMobile = document.getElementById('menu-mobile');
+    const linksNavegacao = document.querySelector('.links-navegacao');
 
-    if (mobileMenu && navLinks) {
-        mobileMenu.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
+    if (menuMobile && linksNavegacao) {
+        menuMobile.addEventListener('click', function() {
+            linksNavegacao.classList.toggle('active');
+            menuMobile.classList.toggle('active');
         });
 
         // Fecha o menu ao clicar em um link
-        const links = navLinks.querySelectorAll('a');
+        const links = linksNavegacao.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', function() {
-                navLinks.classList.remove('active');
-                mobileMenu.classList.remove('active');
+                linksNavegacao.classList.remove('active');
+                menuMobile.classList.remove('active');
             });
         });
     }
 }
 
 // ===== BOTÃO DE TEMA =====
-function initThemeToggle() {
-    const themeBtn = document.getElementById('theme-btn');
-    const themeIcon = themeBtn ? themeBtn.querySelector('.material-icons') : null;
+function iniciarAlternadorTema() {
+    const botaoTema = document.getElementById('botao-tema');
+    const iconeTeam = botaoTema ? botaoTema.querySelector('.material-icons') : null;
 
-    if (!themeBtn) return;
+    if (!botaoTema) return;
 
     // Carrega o tema salvo
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    applyTheme(savedTheme);
+    const temaSalvo = localStorage.getItem('tema') || 'claro';
+    aplicarTema(temaSalvo);
 
     // Clique no botão de tema
-    themeBtn.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        applyTheme(newTheme);
+    botaoTema.addEventListener('click', function() {
+        const temaAtual = document.documentElement.getAttribute('data-theme');
+        const novoTema = temaAtual === 'dark' ? 'claro' : 'escuro';
+        aplicarTema(novoTema);
     });
 
     // Função para aplicar o tema
-    function applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        
-        if (themeIcon) {
-            themeIcon.textContent = theme === 'dark' ? 'light_mode' : 'dark_mode';
+    function aplicarTema(tema) {
+        if (tema === 'escuro') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('tema', 'escuro');
+            if (iconeTeam) {
+                iconeTeam.textContent = 'light_mode';
+            }
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('tema', 'claro');
+            if (iconeTeam) {
+                iconeTeam.textContent = 'dark_mode';
+            }
         }
     }
 }
 
 // ===== BOTÃO DE ACESSIBILIDADE =====
-function initAccessibility() {
-    const accessibilityBtn = document.getElementById('accessibility-btn');
+function iniciarAcessibilidade() {
+    const botaoAcessibilidade = document.getElementById('botao-acessibilidade');
     
-    if (!accessibilityBtn) return;
+    if (!botaoAcessibilidade) return;
 
-    let currentSize = 'normal'; // normal, large, extra-large
+    let tamanhoAtual = 'normal'; // normal, grande, extra-grande
     
     // Carrega o tamanho salvo
-    const savedSize = localStorage.getItem('font-size') || 'normal';
-    applyFontSize(savedSize);
+    const tamanhoSalvo = localStorage.getItem('tamanho-fonte') || 'normal';
+    aplicarTamanhoFonte(tamanhoSalvo);
 
     // Clique no botão de acessibilidade
-    accessibilityBtn.addEventListener('click', function() {
-        const sizes = ['normal', 'large', 'extra-large'];
-        const currentIndex = sizes.indexOf(currentSize);
-        const nextIndex = (currentIndex + 1) % sizes.length;
-        applyFontSize(sizes[nextIndex]);
+    botaoAcessibilidade.addEventListener('click', function() {
+        const tamanhos = ['normal', 'grande', 'extra-grande'];
+        const indiceAtual = tamanhos.indexOf(tamanhoAtual);
+        const proximoIndice = (indiceAtual + 1) % tamanhos.length;
+        aplicarTamanhoFonte(tamanhos[proximoIndice]);
     });
 
     // Função para aplicar tamanho da fonte
-    function applyFontSize(size) {
+    function aplicarTamanhoFonte(tamanho) {
         // Remove classes anteriores
-        document.body.classList.remove('font-normal', 'font-large', 'font-extra-large');
+        document.body.classList.remove('fonte-normal', 'fonte-grande', 'fonte-extra-grande');
         
         // Adiciona nova classe
-        document.body.classList.add('font-' + size);
+        document.body.classList.add('fonte-' + tamanho);
         
-        currentSize = size;
-        localStorage.setItem('font-size', size);
+        tamanhoAtual = tamanho;
+        localStorage.setItem('tamanho-fonte', tamanho);
     }
 }
 
 // ===== FORMULÁRIO DE CONTATO =====
-function initContactForm() {
-    const contactForm = document.getElementById('contact-form');
+function iniciarFormularioContato() {
+    const formularioContato = document.getElementById('formulario-contato');
     
-    if (!contactForm) return;
+    if (!formularioContato) return;
 
     // Evento de envio do formulário
-    contactForm.addEventListener('submit', function(e) {
+    formularioContato.addEventListener('submit', function(e) {
         e.preventDefault(); // Impede o envio padrão
         
         // Mostra o alerta conforme solicitado no trabalho
         alert('Página em construção');
         
         // Opcional: resetar o formulário
-        // contactForm.reset();
+        // formularioContato.reset();
     });
 }
 
 // ===== VERIFICADOR DE SENHA =====
-function initPasswordChecker() {
-    const passwordInput = document.getElementById('password-input');
-    const strengthFill = document.querySelector('.strength-fill');
-    const strengthText = document.getElementById('strength-text');
+function iniciarVerificadorSenha() {
+    const entradaSenha = document.getElementById('entrada-senha');
+    const preenchimentoForca = document.querySelector('.preenchimento-forca');
+    const textoForca = document.getElementById('texto-forca');
 
-    if (!passwordInput || !strengthFill) return;
+    if (!entradaSenha || !preenchimentoForca) return;
 
     // Evento de digitação na senha
-    passwordInput.addEventListener('input', function() {
-        const password = this.value;
-        const strength = checkPasswordStrength(password);
-        updateStrengthBar(strength, password.length);
+    entradaSenha.addEventListener('input', function() {
+        const senha = this.value;
+        const forca = verificarForcaSenha(senha);
+        atualizarBarraForca(forca, senha.length);
     });
 
     // Função para verificar a força da senha
-    function checkPasswordStrength(password) {
-        let score = 0;
+    function verificarForcaSenha(senha) {
+        let pontos = 0;
         
-        if (password.length === 0) return 0;
+        if (senha.length === 0) return 0;
         
         // Critérios básicos
-        if (password.length >= 8) score += 1;
-        if (password.length >= 12) score += 1;
-        if (/[a-z]/.test(password)) score += 1; // letra minúscula
-        if (/[A-Z]/.test(password)) score += 1; // letra maiúscula
-        if (/[0-9]/.test(password)) score += 1; // número
-        if (/[^A-Za-z0-9]/.test(password)) score += 1; // símbolo
+        if (senha.length >= 8) pontos += 1;
+        if (senha.length >= 12) pontos += 1;
+        if (/[a-z]/.test(senha)) pontos += 1; // letra minúscula
+        if (/[A-Z]/.test(senha)) pontos += 1; // letra maiúscula
+        if (/[0-9]/.test(senha)) pontos += 1; // número
+        if (/[^A-Za-z0-9]/.test(senha)) pontos += 1; // símbolo
         
-        return Math.min(score, 5);
+        return Math.min(pontos, 5);
     }
 
     // Função para atualizar a barra de força
-    function updateStrengthBar(strength, length) {
-        const colors = ['#ef4444', '#f59e0b', '#eab308', '#10b981', '#059669'];
-        const texts = ['Muito fraca', 'Fraca', 'Regular', 'Forte', 'Muito forte'];
-        const widths = ['20%', '40%', '60%', '80%', '100%'];
+    function atualizarBarraForca(forca, comprimento) {
+        const cores = ['#ef4444', '#f59e0b', '#eab308', '#10b981', '#059669'];
+        const textos = ['Muito fraca', 'Fraca', 'Regular', 'Forte', 'Muito forte'];
+        const larguras = ['20%', '40%', '60%', '80%', '100%'];
         
-        if (length === 0) {
-            strengthFill.style.width = '0%';
-            strengthFill.style.backgroundColor = '#e5e7eb';
-            if (strengthText) strengthText.textContent = 'Digite uma senha';
+        if (comprimento === 0) {
+            preenchimentoForca.style.width = '0%';
+            preenchimentoForca.style.backgroundColor = '#e5e7eb';
+            if (textoForca) textoForca.textContent = 'Digite uma senha';
             return;
         }
         
-        const index = Math.max(0, strength - 1);
-        strengthFill.style.width = widths[index];
-        strengthFill.style.backgroundColor = colors[index];
-        if (strengthText) strengthText.textContent = texts[index];
+        const indice = Math.max(0, forca - 1);
+        preenchimentoForca.style.width = larguras[indice];
+        preenchimentoForca.style.backgroundColor = cores[indice];
+        if (textoForca) textoForca.textContent = textos[indice];
     }
 }
 
@@ -170,14 +177,14 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         if (href === '#') return;
         
         e.preventDefault();
-        const target = document.querySelector(href);
+        const alvo = document.querySelector(href);
         
-        if (target) {
-            const headerHeight = 80; // altura do header fixo
-            const targetPosition = target.offsetTop - headerHeight;
+        if (alvo) {
+            const alturaHeader = 80; // altura do header fixo
+            const posicaoAlvo = alvo.offsetTop - alturaHeader;
             
             window.scrollTo({
-                top: targetPosition,
+                top: posicaoAlvo,
                 behavior: 'smooth'
             });
         }
@@ -186,69 +193,69 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 // ===== ANIMAÇÕES SIMPLES =====
 // Adiciona uma animação de entrada básica aos cards
-function addScrollAnimation() {
-    const cards = document.querySelectorAll('.feature-card, .tip-card, .team-member');
+function adicionarAnimacaoScroll() {
+    const cartoes = document.querySelectorAll('.cartao-recurso, .cartao-dica, .membro-equipe');
     
-    const observerOptions = {
+    const opcoeObservador = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+    const observador = new IntersectionObserver(function(entradas) {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.style.opacity = '1';
+                entrada.target.style.transform = 'translateY(0)';
             }
         });
-    }, observerOptions);
+    }, opcoeObservador);
 
-    cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        observer.observe(card);
+    cartoes.forEach(cartao => {
+        cartao.style.opacity = '0';
+        cartao.style.transform = 'translateY(20px)';
+        cartao.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observador.observe(cartao);
     });
 }
 
 // Inicializa as animações
-addScrollAnimation();
+adicionarAnimacaoScroll();
 
 // ===== UTILITÁRIOS =====
 
 // Função para mostrar alertas (versão simples)
-function showAlert(message, type = 'info') {
+function mostrarAlerta(mensagem, tipo = 'info') {
     // Cria um alerta simples
-    const alertDiv = document.createElement('div');
-    alertDiv.textContent = message;
-    alertDiv.style.cssText = `
+    const divAlerta = document.createElement('div');
+    divAlerta.textContent = mensagem;
+    divAlerta.style.cssText = `
         position: fixed;
         top: 100px;
         right: 20px;
-        background: var(--primary-color);
+        background: var(--cor-primaria);
         color: white;
         padding: 1rem;
         border-radius: 0.5rem;
         z-index: 9999;
-        box-shadow: var(--shadow);
+        box-shadow: var(--sombra);
     `;
     
-    if (type === 'success') {
-        alertDiv.style.background = 'var(--success-color)';
-    } else if (type === 'error') {
-        alertDiv.style.background = 'var(--danger-color)';
+    if (tipo === 'sucesso') {
+        divAlerta.style.background = 'var(--cor-sucesso)';
+    } else if (tipo === 'erro') {
+        divAlerta.style.background = 'var(--cor-perigo)';
     }
     
-    document.body.appendChild(alertDiv);
+    document.body.appendChild(divAlerta);
     
     // Remove após 3 segundos
     setTimeout(() => {
-        alertDiv.remove();
+        divAlerta.remove();
     }, 3000);
 }
 
 // Função para detectar dispositivo móvel
-function isMobile() {
+function ehMobile() {
     return window.innerWidth <= 768;
 }
 

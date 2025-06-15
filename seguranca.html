@@ -11,26 +11,28 @@
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar">
+        <nav class="barra-navegacao">
             <div class="container">
                 <div class="logo">
-                    <h2>🛡️ CyberSafe</h2>
+                    <a href="index.html" class="link-logo">
+                        <h2>🛡️ CyberSafe</h2>
+                    </a>
                 </div>
-                <ul class="nav-links">
+                <ul class="links-navegacao">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="seguranca.html" class="active">Segurança</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
-                <div class="nav-controls">
-                    <button id="accessibility-btn" class="control-btn">
+                <div class="controles-navegacao">
+                    <button id="botao-acessibilidade" class="botao-controle">
                         <span class="material-icons">accessibility</span>
                     </button>
-                    <button id="theme-btn" class="control-btn">
+                    <button id="botao-tema" class="botao-controle">
                         <span class="material-icons">dark_mode</span>
                     </button>
                 </div>
-                <div class="mobile-menu" id="mobile-menu">
+                <div class="menu-mobile" id="menu-mobile">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -42,7 +44,7 @@
     <!-- Main Content -->
     <main>
         <!-- Page Header -->
-        <section class="page-header">
+        <section class="cabecalho-pagina">
             <div class="container">
                 <h1>Guias de Segurança Digital</h1>
                 <p>Aprenda a se proteger no mundo digital com nossas dicas práticas</p>
@@ -50,13 +52,13 @@
         </section>
 
         <!-- Password Security Section -->
-        <section class="features">
+        <section class="recursos">
             <div class="container">
-                <h2 class="section-title">🔐 Senhas Seguras</h2>
-                <div class="security-grid">
-                    <div class="security-card">
+                <h2 class="titulo-secao">🔐 Senhas Seguras</h2>
+                <div class="grade-seguranca">
+                    <div class="cartao-seguranca">
                         <h3>Como Criar uma Senha Forte</h3>
-                        <ul class="security-list">
+                        <ul class="lista-seguranca">
                             <li>Use pelo menos 8 caracteres (idealmente 12+)</li>
                             <li>Combine letras maiúsculas e minúsculas</li>
                             <li>Inclua números e símbolos especiais</li>
@@ -66,9 +68,9 @@
                         </ul>
                     </div>
                     
-                    <div class="security-card">
+                    <div class="cartao-seguranca">
                         <h3>Dicas Importantes</h3>
-                        <ul class="security-list">
+                        <ul class="lista-seguranca">
                             <li>Nunca compartilhe suas senhas</li>
                             <li>Use um gerenciador de senhas</li>
                             <li>Ative autenticação de dois fatores</li>
@@ -80,42 +82,42 @@
                 </div>
                 
                 <!-- Password Checker -->
-                <div class="password-checker">
+                <div class="verificador-senha">
                     <h3>Teste a Força da sua Senha</h3>
-                    <input type="password" id="password-input" placeholder="Digite uma senha para testar">
-                    <div class="strength-bar">
-                        <div class="strength-fill"></div>
+                    <input type="password" id="entrada-senha" placeholder="Digite uma senha para testar">
+                    <div class="barra-forca">
+                        <div class="preenchimento-forca"></div>
                     </div>
-                    <p id="strength-text">Digite uma senha</p>
+                    <p id="texto-forca">Digite uma senha</p>
                 </div>
             </div>
         </section>
 
         <!-- Phishing Section -->
-        <section class="tips">
+        <section class="dicas">
             <div class="container">
-                <h2 class="section-title">🎣 Phishing e Golpes Online</h2>
-                <div class="tips-grid">
-                    <div class="tip-card">
-                        <div class="tip-number">⚠️</div>
+                <h2 class="titulo-secao">🎣 Phishing e Golpes Online</h2>
+                <div class="grade-dicas">
+                    <div class="cartao-dica">
+                        <div class="numero-dica">⚠️</div>
                         <h3>Sinais de Alerta</h3>
                         <p>Urgência excessiva, remetente desconhecido, erros de português, links suspeitos e solicitações de dados pessoais.</p>
                     </div>
                     
-                    <div class="tip-card">
-                        <div class="tip-number">🔍</div>
+                    <div class="cartao-dica">
+                        <div class="numero-dica">🔍</div>
                         <h3>Como Verificar</h3>
                         <p>Sempre confirme o remetente, passe o mouse sobre links sem clicar e acesse sites digitando a URL manualmente.</p>
                     </div>
                     
-                    <div class="tip-card">
-                        <div class="tip-number">🛡️</div>
+                    <div class="cartao-dica">
+                        <div class="numero-dica">🛡️</div>
                         <h3>Proteção</h3>
                         <p>Use antivírus atualizado, desconfie de ofertas "boas demais" e confirme informações por telefone quando necessário.</p>
                     </div>
                     
-                    <div class="tip-card">
-                        <div class="tip-number">📞</div>
+                    <div class="cartao-dica">
+                        <div class="numero-dica">📞</div>
                         <h3>Em Caso de Dúvida</h3>
                         <p>Ligue para a empresa usando um número oficial. Nunca forneça dados pessoais por e-mail ou telefone não solicitado.</p>
                     </div>
@@ -124,12 +126,12 @@
         </section>
 
         <!-- Malware Section -->
-        <section class="features">
+        <section class="recursos">
             <div class="container">
-                <h2 class="section-title">🦠 Proteção contra Malware</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                <h2 class="titulo-secao">🦠 Proteção contra Malware</h2>
+                <div class="grade-recursos">
+                    <div class="cartao-recurso">
+                        <div class="icone-recurso">
                             <span class="material-icons">bug_report</span>
                         </div>
                         <h3>Tipos de Malware</h3>
@@ -139,8 +141,8 @@
                         <strong>Trojan:</strong> Se disfarça de programa legítimo</p>
                     </div>
                     
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <div class="cartao-recurso">
+                        <div class="icone-recurso">
                             <span class="material-icons">security</span>
                         </div>
                         <h3>Como se Proteger</h3>
@@ -151,8 +153,8 @@
                         • Cuidado com anexos de e-mail</p>
                     </div>
                     
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <div class="cartao-recurso">
+                        <div class="icone-recurso">
                             <span class="material-icons">backup</span>
                         </div>
                         <h3>Backup Regular</h3>
@@ -163,30 +165,30 @@
         </section>
 
         <!-- Social Media Section -->
-        <section class="tips">
+        <section class="dicas">
             <div class="container">
-                <h2 class="section-title">📱 Segurança nas Redes Sociais</h2>
-                <div class="tips-grid">
-                    <div class="tip-card">
-                        <div class="tip-number">🔒</div>
+                <h2 class="titulo-secao">📱 Segurança nas Redes Sociais</h2>
+                <div class="grade-dicas">
+                    <div class="cartao-dica">
+                        <div class="numero-dica">🔒</div>
                         <h3>Configurações de Privacidade</h3>
                         <p>Revise regularmente quem pode ver suas publicações, fotos e informações pessoais. Limite a visibilidade ao máximo necessário.</p>
                     </div>
                     
-                    <div class="tip-card">
-                        <div class="tip-number">📍</div>
+                    <div class="cartao-dica">
+                        <div class="numero-dica">📍</div>
                         <h3>Localização</h3>
                         <p>Desative o compartilhamento de localização automático. Evite postar em tempo real onde você está, especialmente em casa.</p>
                     </div>
                     
-                    <div class="tip-card">
-                        <div class="tip-number">👥</div>
+                    <div class="cartao-dica">
+                        <div class="numero-dica">👥</div>
                         <h3>Contatos</h3>
                         <p>Aceite apenas solicitações de pessoas que você conhece. Desconfie de perfis com poucas fotos ou informações suspeitas.</p>
                     </div>
                     
-                    <div class="tip-card">
-                        <div class="tip-number">📱</div>
+                    <div class="cartao-dica">
+                        <div class="numero-dica">📱</div>
                         <h3>Aplicativos Conectados</h3>
                         <p>Revise regularmente quais aplicativos têm acesso às suas redes sociais. Remova aqueles que não usa mais.</p>
                     </div>
@@ -195,28 +197,28 @@
         </section>
 
         <!-- Wi-Fi Security Section -->
-        <section class="features">
+        <section class="recursos">
             <div class="container">
-                <h2 class="section-title">📶 Segurança em Wi-Fi</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                <h2 class="titulo-secao">📶 Segurança em Wi-Fi</h2>
+                <div class="grade-recursos">
+                    <div class="cartao-recurso">
+                        <div class="icone-recurso">
                             <span class="material-icons">wifi</span>
                         </div>
                         <h3>Wi-Fi Doméstico</h3>
                         <p>Use senha WPA3 ou WPA2, altere a senha padrão do roteador, mantenha o firmware atualizado e desative WPS se não usar.</p>
                     </div>
                     
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <div class="cartao-recurso">
+                        <div class="icone-recurso">
                             <span class="material-icons">public</span>
                         </div>
                         <h3>Wi-Fi Público</h3>
                         <p>Evite acessar bancos ou informações sensíveis. Use HTTPS sempre que possível e considere usar uma VPN para maior proteção.</p>
                     </div>
                     
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <div class="cartao-recurso">
+                        <div class="icone-recurso">
                             <span class="material-icons">vpn_key</span>
                         </div>
                         <h3>VPN</h3>
@@ -227,24 +229,24 @@
         </section>
 
         <!-- Quick Tips Section -->
-        <section class="stats">
+        <section class="estatisticas">
             <div class="container">
-                <h2 class="section-title">Dicas Rápidas</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">💳</div>
+                <h2 class="titulo-secao">Dicas Rápidas</h2>
+                <div class="grade-estatisticas">
+                    <div class="item-estatistica">
+                        <div class="numero-estatistica">💳</div>
                         <p><strong>Compras Online</strong><br>Verifique se o site é seguro (HTTPS) antes de inserir dados do cartão</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">📧</div>
+                    <div class="item-estatistica">
+                        <div class="numero-estatistica">📧</div>
                         <p><strong>E-mails</strong><br>Desconfie de anexos e links de remetentes desconhecidos</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">🔄</div>
+                    <div class="item-estatistica">
+                        <div class="numero-estatistica">🔄</div>
                         <p><strong>Atualizações</strong><br>Mantenha sempre sistemas e aplicativos atualizados</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">🔐</div>
+                    <div class="item-estatistica">
+                        <div class="numero-estatistica">🔐</div>
                         <p><strong>Autenticação</strong><br>Use verificação em duas etapas sempre que disponível</p>
                     </div>
                 </div>
@@ -253,14 +255,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="rodape">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="conteudo-rodape">
+                <div class="secao-rodape">
                     <h3>🛡️ CyberSafe</h3>
                     <p>Educando sobre segurança digital para um mundo mais seguro.</p>
                 </div>
-                <div class="footer-section">
+                <div class="secao-rodape">
                     <h4>Links</h4>
                     <ul>
                         <li><a href="index.html">Início</a></li>
@@ -269,14 +271,14 @@
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="secao-rodape">
                     <h4>Projeto Acadêmico</h4>
                     <p>Universidade de Passo Fundo - UPF<br>
                     Curso: Análise e Desenvolvimento de Sistemas<br>
                     Disciplina: Desenvolvimento para Web</p>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="parte-inferior-rodape">
                 <p>&copy; 2024 CyberSafe. Projeto acadêmico - UPF.</p>
             </div>
         </div>

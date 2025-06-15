@@ -11,26 +11,28 @@
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar">
+        <nav class="barra-navegacao">
             <div class="container">
                 <div class="logo">
-                    <h2>🛡️ CyberSafe</h2>
+                    <a href="index.html" class="link-logo">
+                        <h2>🛡️ CyberSafe</h2>
+                    </a>
                 </div>
-                <ul class="nav-links">
+                <ul class="links-navegacao">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="seguranca.html">Segurança</a></li>
                     <li><a href="sobre.html" class="active">Sobre</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
-                <div class="nav-controls">
-                    <button id="accessibility-btn" class="control-btn">
+                <div class="controles-navegacao">
+                    <button id="botao-acessibilidade" class="botao-controle">
                         <span class="material-icons">accessibility</span>
                     </button>
-                    <button id="theme-btn" class="control-btn">
+                    <button id="botao-tema" class="botao-controle">
                         <span class="material-icons">dark_mode</span>
                     </button>
                 </div>
-                <div class="mobile-menu" id="mobile-menu">
+                <div class="menu-mobile" id="menu-mobile">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -42,7 +44,7 @@
     <!-- Main Content -->
     <main>
         <!-- Page Header -->
-        <section class="page-header">
+        <section class="cabecalho-pagina">
             <div class="container">
                 <h1>Sobre o Projeto</h1>
                 <p>Conheça nossa equipe e a missão do CyberSafe</p>
@@ -50,26 +52,26 @@
         </section>
 
         <!-- Project Info -->
-        <section class="features">
+        <section class="recursos">
             <div class="container">
-                <h2 class="section-title">Nossa Missão</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                <h2 class="titulo-secao">Nossa Missão</h2>
+                <div class="grade-recursos">
+                    <div class="cartao-recurso">
+                        <div class="icone-recurso">
                             <span class="material-icons">school</span>
                         </div>
                         <h3>Educação Digital</h3>
                         <p>Promover a conscientização sobre segurança da informação através de conteúdo educativo e acessível.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <div class="cartao-recurso">
+                        <div class="icone-recurso">
                             <span class="material-icons">groups</span>
                         </div>
                         <h3>Projeto Acadêmico</h3>
                         <p>Desenvolvido como trabalho final da disciplina de Desenvolvimento para Web do curso de ADS da UPF.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <div class="cartao-recurso">
+                        <div class="icone-recurso">
                             <span class="material-icons">public</span>
                         </div>
                         <h3>Impacto Social</h3>
@@ -80,63 +82,63 @@
         </section>
 
         <!-- Team Section -->
-        <section class="team">
+        <section class="equipe">
             <div class="container">
-                <h2 class="section-title">Nossa Equipe</h2>
-                <div class="team-grid">
+                <h2 class="titulo-secao">Nossa Equipe</h2>
+                <div class="grade-equipe">
                     <!-- Membro 1 -->
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <img src="img/ber1.jpg " alt="Foto de Bernardo">
+                    <div class="membro-equipe">
+                        <div class="foto-membro">
+                            <img src="img/member1.jpg" alt="Foto de João Silva">
                             <!-- Se não tiver foto, mostra as iniciais -->
                             JS
                         </div>
-                        <div class="member-info">
-                            <h3>Bernardo Signor/h3>
-                            <p class="member-role">Academico</p>
+                        <div class="info-membro">
+                            <h3>João Silva</h3>
+                            <p class="cargo-membro">Desenvolvedor Front-end</p>
                             <p>Responsável pelo desenvolvimento da interface do usuário, design responsivo e experiência do usuário. Focado em HTML5, CSS3 e JavaScript.</p>
-                            <div class="member-skills">
-                                <span class="skill">HTML</span>
-                                <span class="skill">CSS</span>
-                                <span class="skill">JavaScript</span>
+                            <div class="habilidades-membro">
+                                <span class="habilidade">HTML</span>
+                                <span class="habilidade">CSS</span>
+                                <span class="habilidade">JavaScript</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Membro 2 -->
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <img src="img/vini1.jpg" alt="Foto de Maria Santos">
+                    <div class="membro-equipe">
+                        <div class="foto-membro">
+                            <img src="img/member2.jpg" alt="Foto de Maria Santos">
                             <!-- Se não tiver foto, mostra as iniciais -->
                             MS
                         </div>
-                        <div class="member-info">
-                            <h3>Vinicius Mezzomo</h3>
-                            <p class="member-role">Especialista em Conteúdo</p>
+                        <div class="info-membro">
+                            <h3>Maria Santos</h3>
+                            <p class="cargo-membro">Especialista em Conteúdo</p>
                             <p>Responsável pela pesquisa e criação de conteúdo sobre segurança da informação. Garante que todas as informações sejam precisas e atualizadas.</p>
-                            <div class="member-skills">
-                                <span class="skill">Pesquisa</span>
-                                <span class="skill">Conteúdo</span>
-                                <span class="skill">Segurança</span>
+                            <div class="habilidades-membro">
+                                <span class="habilidade">Pesquisa</span>
+                                <span class="habilidade">Conteúdo</span>
+                                <span class="habilidade">Segurança</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Membro 3 -->
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <img src="img/andi4.jpg" alt="Foto de Pedro Oliveira">
+                    <div class="membro-equipe">
+                        <div class="foto-membro">
+                            <img src="img/member3.jpg" alt="Foto de Pedro Oliveira">
                             <!-- Se não tiver foto, mostra as iniciais -->
                             PO
                         </div>
-                        <div class="member-info">
-                            <h3>Anderson Melara</h3>
-                            <p class="member-role">Academico</p>
+                        <div class="info-membro">
+                            <h3>Pedro Oliveira</h3>
+                            <p class="cargo-membro">Desenvolvedor Back-end</p>
                             <p>Responsável pela estrutura do projeto, funcionalidades JavaScript e integração entre as páginas. Focado em performance e usabilidade.</p>
-                            <div class="member-skills">
-                                <span class="skill">JavaScript</span>
-                                <span class="skill">Integração</span>
-                                <span class="skill">Performance</span>
+                            <div class="habilidades-membro">
+                                <span class="habilidade">JavaScript</span>
+                                <span class="habilidade">Integração</span>
+                                <span class="habilidade">Performance</span>
                             </div>
                         </div>
                     </div>
@@ -145,27 +147,27 @@
         </section>
 
         <!-- University Info -->
-        <section class="tips">
+        <section class="dicas">
             <div class="container">
-                <h2 class="section-title">Informações Acadêmicas</h2>
-                <div class="tips-grid">
-                    <div class="tip-card">
-                        <div class="tip-number">🎓</div>
+                <h2 class="titulo-secao">Informações Acadêmicas</h2>
+                <div class="grade-dicas">
+                    <div class="cartao-dica">
+                        <div class="numero-dica">🎓</div>
                         <h3>Universidade</h3>
                         <p>Universidade de Passo Fundo - UPF<br>Instituto de Tecnologia - ITEC</p>
                     </div>
-                    <div class="tip-card">
-                        <div class="tip-number">💻</div>
+                    <div class="cartao-dica">
+                        <div class="numero-dica">💻</div>
                         <h3>Curso</h3>
                         <p>Análise e Desenvolvimento de Sistemas<br>Tecnólogo Superior</p>
                     </div>
-                    <div class="tip-card">
-                        <div class="tip-number">📚</div>
+                    <div class="cartao-dica">
+                        <div class="numero-dica">📚</div>
                         <h3>Disciplina</h3>
                         <p>Desenvolvimento para Web - Web Lab<br>Prof. Me. Pablo Leon Rodrigues</p>
                     </div>
-                    <div class="tip-card">
-                        <div class="tip-number">📅</div>
+                    <div class="cartao-dica">
+                        <div class="numero-dica">📅</div>
                         <h3>Período</h3>
                         <p>2024/1 - Trabalho Final<br>Entrega: 17 de Junho</p>
                     </div>
@@ -174,24 +176,24 @@
         </section>
 
         <!-- Technologies Used -->
-        <section class="stats">
+        <section class="estatisticas">
             <div class="container">
-                <h2 class="section-title">Tecnologias Utilizadas</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">💻</div>
+                <h2 class="titulo-secao">Tecnologias Utilizadas</h2>
+                <div class="grade-estatisticas">
+                    <div class="item-estatistica">
+                        <div class="numero-estatistica">💻</div>
                         <p><strong>HTML5</strong><br>Estrutura semântica moderna</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">🎨</div>
+                    <div class="item-estatistica">
+                        <div class="numero-estatistica">🎨</div>
                         <p><strong>CSS3</strong><br>Estilização responsiva e temas</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">⚡</div>
+                    <div class="item-estatistica">
+                        <div class="numero-estatistica">⚡</div>
                         <p><strong>JavaScript</strong><br>Interatividade e funcionalidades</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">📱</div>
+                    <div class="item-estatistica">
+                        <div class="numero-estatistica">📱</div>
                         <p><strong>Responsivo</strong><br>Funciona em todos dispositivos</p>
                     </div>
                 </div>
@@ -200,14 +202,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="rodape">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="conteudo-rodape">
+                <div class="secao-rodape">
                     <h3>🛡️ CyberSafe</h3>
                     <p>Educando sobre segurança digital para um mundo mais seguro.</p>
                 </div>
-                <div class="footer-section">
+                <div class="secao-rodape">
                     <h4>Links</h4>
                     <ul>
                         <li><a href="index.html">Início</a></li>
@@ -216,14 +218,14 @@
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="secao-rodape">
                     <h4>Projeto Acadêmico</h4>
                     <p>Universidade de Passo Fundo - UPF<br>
                     Curso: Análise e Desenvolvimento de Sistemas<br>
                     Disciplina: Desenvolvimento para Web</p>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="parte-inferior-rodape">
                 <p>&copy; 2024 CyberSafe. Projeto acadêmico - UPF.</p>
             </div>
         </div>
