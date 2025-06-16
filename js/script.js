@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     iniciarVerificadorSenha();
 });
 
-// ===== MENU MOBILE =====
+//MENU MOBILE
 function iniciarMenuMobile() {
     const menuMobile = document.getElementById('menu-mobile');
     const linksNavegacao = document.querySelector('.links-navegacao');
@@ -30,7 +30,7 @@ function iniciarMenuMobile() {
     }
 }
 
-// ===== BOTÃO DE TEMA =====
+//BOTÃO DE TEMA 
 function iniciarAlternadorTema() {
     const botaoTema = document.getElementById('botao-tema');
     const iconeTeam = botaoTema ? botaoTema.querySelector('.material-icons') : null;
@@ -66,7 +66,7 @@ function iniciarAlternadorTema() {
     }
 }
 
-// ===== BOTÃO DE ACESSIBILIDADE =====
+//BOTÃO DE ACESSIBILIDADE
 function iniciarAcessibilidade() {
     const botaoAcessibilidade = document.getElementById('botao-acessibilidade');
     
@@ -99,7 +99,7 @@ function iniciarAcessibilidade() {
     }
 }
 
-// ===== FORMULÁRIO DE CONTATO =====
+//FORMULÁRIO DE CONTATO
 function iniciarFormularioContato() {
     const formularioContato = document.getElementById('formulario-contato');
     
@@ -117,7 +117,7 @@ function iniciarFormularioContato() {
     });
 }
 
-// ===== VERIFICADOR DE SENHA =====
+//VERIFICADOR DE SENHA
 function iniciarVerificadorSenha() {
     const entradaSenha = document.getElementById('entrada-senha');
     const preenchimentoForca = document.querySelector('.preenchimento-forca');
@@ -169,7 +169,7 @@ function iniciarVerificadorSenha() {
     }
 }
 
-// ===== SCROLL SUAVE =====
+//SCROLL SUAVE
 // Adiciona scroll suave para links âncora
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -191,7 +191,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// ===== ANIMAÇÕES SIMPLES =====
+//ANIMAÇÕES SIMPLES
 // Adiciona uma animação de entrada básica aos cards
 function adicionarAnimacaoScroll() {
     const cartoes = document.querySelectorAll('.cartao-recurso, .cartao-dica, .membro-equipe');
@@ -221,7 +221,7 @@ function adicionarAnimacaoScroll() {
 // Inicializa as animações
 adicionarAnimacaoScroll();
 
-// ===== UTILITÁRIOS =====
+//UTILITÁRIOS
 
 // Função para mostrar alertas (versão simples)
 function mostrarAlerta(mensagem, tipo = 'info') {

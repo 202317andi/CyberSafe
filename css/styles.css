@@ -321,18 +321,6 @@ main {
     box-shadow: var(--sombra);
 }
 
-.numero-dica {
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
 
 .cartao-dica h3 {
     font-size: 1.2rem;
@@ -357,12 +345,6 @@ main {
     padding: 1.5rem;
 }
 
-.numero-estatistica {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--cor-primaria);
-    margin-bottom: 0.5rem;
-}
 
 .item-estatistica p {
     color: var(--cor-texto-clara);
@@ -563,12 +545,6 @@ main {
     border-color: var(--cor-primaria);
 }
 
-.grupo-checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
 
 .grupo-checkbox input[type="checkbox"] {
     width: auto;
